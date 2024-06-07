@@ -1,127 +1,119 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>스와이프 갤러리</title>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/style.css">	
-	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</head>
-<body>	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doboo</title>
+<style>
+    *{font-family: Arial, Helvetica, sans-serif;
+          list-style:none;
+          text-decoration: none;
+          border-collapse: collapse;/* border-collapse: collapse; 테이블 선 떨어져 있는걸 다 붙여줌*/
+          margin:0px;
+          padding: 0px;
+          color: black;}
+ 
 
-	<div class="wrap">
-		<h1>UI/UX <span>PORTFOLIO</span></h1>
+.intro {background-image:url("/website1-main/img/pic5.png");
+        width: 100%; height: 714px;}
+.header {display:flex; width: 1280px; height: 86px ; margin:auto; }    
 
-		<ul class="auto">
-			<li class="btnStart"><i class="fas fa-play"></i></li>
-			<li class="btnStop"><i class="fas fa-pause"></i></li>
-		</ul>
+.search {width: 300px; height:40px; background:rgba(0,0,0,0.0);
+        border-radius: 5px; margin-top:24px;}
+ /* border-radius:;요소의 모서리를 둥글게 만들 수 있습니다 */
+.search>form>input{border: none; background:rgba(0,0,0,0);
+                   width:250px; height:40px; color: #fff; padding-left: 10px;}
 
-<div class="swiper-wrapper">
-	<div class="swiper-slide">
-		<div class="inner">
-			<div class="con">
-				<img src="img/pic1.png">
-				<h2>Ipsum dolor sit amet.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, optio.</p>
-			</div>
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="inner">
-			<div class="con">
-				<img src="img/pic2.png">
-				<h2>Lorem ipsum dolor.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum doloribus voluptate officiis excepturi!</p>
-			</div>
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="inner">
-			<div class="con">
-				<img src="img/pic3.png">
-				<h2>Dolor ipsum  sit.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi officiis iste nam quae.</p>
-			</div>
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="inner">
-			<div class="con">
-				<img src="img/pic4.png">
-				<h2>Consectetur adicing.</h2>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit optio debitis sapiente!</p>
-			</div>
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="inner">
-			<div class="con">
-				<img src="img/pic5.png">
-				<h2>Dicta! elit. </h2>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, accusantium corrupti.</p>
-			</div>
-		</div>
-	</div>
-</div>
+.search>form>span{width: 50px; color:#fff; font-weight: bold; cursor: pointer;}
+ .nav {display: flex;
+      justify-content:flex-end;
+      line-height: 86px;
+       width:calc(1280px-300px);
+       color: white;}    
 
-		<!-- 좌우버튼 -->
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		
-		<!-- 페이징 버튼 -->
-		<div class="swiper-pagination"></div>
-	</div>
+.nav > li {margin-left: 84px;}
 
-	<script>
-		const swiper = new Swiper('.wrap',{	
-			direction: "horizontal",
-			loop: true,						
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction'
-			},	
-			navigation : {				
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',			
-			},
-			spaceBetween: 0,
-			slidesPerView: "auto",
-			grabCursor: true,
-			centeredSlides :true,
-			speed:1000,
-			effect:"coverflow",	
-			coverflowEffect: {
-				rotate: 50,
-				stretch: -100,
-				depth: 400,
-				modifier: 1,
-				slideShadows: false,
-			},
-			autoplay: {
-				delay:1000,		
-				disableOnInteraction : true
-			}	
-		});
+.nav > li >a {color:white ;
+        font-size: 15px ;}
 
-		// .btnStart 요소를 찾아서 btnStart에 저장
-		const btnStart = document.querySelector(".btnStart");
-		// .btnStop 요소를 찾아서 btnStop에 저장
-		const btnStop = document.querySelector(".btnStop");
 
-		//btnStart버튼을 클릭시 자동롤링 시작
-		btnStart.addEventListener("click",()=>{
-			swiper.autoplay.start();
-		});
+.intro>h1{color:#fff;}
 
-		//btnStart버튼을 클릭시 자동롤링 정지
-		btnStop.addEventListener("click",()=>{
-			swiper.autoplay.stop();
-		});
-	</script>	
+.intro>h4{color: #fff;}
+
+.intro {width: 100%; margin: 231px auto 231px auto;text-align:center;
+        font-size:20px;}
+
+.amount{position:relative; top:-300px;
+    /* top:-66px; */
+        width: 1280px; background: white; display: flex; 
+        margin: auto; }
+
+.amount> li{flex: 1; height: 132px;}
+
+.amount> li > div {font-size: 12px;
+                text-align:center; height: 57px;
+                border-right: 1px solid #fff;
+                margin-top: 37px;}
+.amount> li > div:not(:last-child){border-right:1px solid #fff ;}
+.am1 {font-size: 15px; }
+.amm1 {font-size: 12px ;}
+.am2 {font-size:15px ; }
+.amm2 {font-size: 12px;}
+.am3 {font-size: 15px;}
+.amm3 a:hover {font-size: 12px;}
+
+.main {width: 100px; height: 601px; background: #c0bfbf;
+    margin-top:-132;}
+.main > h1 {margin-top:116px; text-align: center; font-weight:100;}
+    
+    
+    </style>
+<body>
+    <div class="wrap">
+        <div class="intro">
+            <div class="header">
+                <div class="search">
+                    <form>
+                   <input type="search" placeholder="search">           
+                    <span>검색</span>  
+                </form>
+                </div>
+            <ul class="nav">
+                <li><a href="">홈</a></li>
+                <li><a href="/ch04_CSS1/coffee1p144.html">커피</a></li>
+                <li><a href="https://m.work.go.kr/consltJobCarpa/jobPsyExamNew/conslt/jobPsyExamConsltList.do" taget="_self">직업상담</a></li>
+                <li><a href="/website1-main/inmini_pro/s2.html">실업지원</a></li>
+            </ul>
+            </div>
+             <div class="intro">
+                <h1>NEW LIFE</h1>
+                <h4>삶의 안정을 위해 직업과 실업지원에 대한 정보를 제공합니다</h4>
+             </div>
+           <ul class="amount">
+            <li>
+                <div>
+                <div class="am1">실업신고</div>
+            <div class="amm1">구직급여를 받으려면 이직 후 지체없이 고용센터에 출석하여 <br>실업을 신고해야 하며,
+                실업의 신고에는 구직 신청과<br>수급자격 인정신청이 포함됩니다.</div>
+            </div>
+            </li>
+            <li>
+                <div>
+            <div class="am2">실업급여</div>
+              <div class="amm2">고용보험 가입 근로자가 실직하여 재취업 활동을 하는 기간에<br>
+                   소정의 급여를 지급함으로써 실업으로 인한 생계불안을 극복하고 생활의 안정을 도와주며 재취업의 기회를 지원해주는 제도</div>
+            </div>
+        </li>
+            <li>
+                <div>
+                <div class="am3">구인/구직</div>
+              <div class="amm3"><a href="https://www.work.go.kr">워크넷이동</a></div>
+            </li>
+           </ul>
+    <!-- <div class="main">
+        <h1>ABOUT</h1> -->
+        </div>
+        </ul>
 </body>
 </html>
