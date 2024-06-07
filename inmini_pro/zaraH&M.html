@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 페이지</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(../inmini_pro/zara.jpg);/* 배경 이미지 경로 */
+            background-size: cover; /* 이미지가 전체 화면을 덮도록 설정 */
+            background-position: center; /* 이미지가 가운데 위치하도록 설정 */
+            background-repeat: no-repeat; /* 이미지가 반복되지 않도록 설정 */
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.3); /* 흰색 배경에 약간의 투명도를 추가 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: teal;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #feedback {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>퀴즈</h1>
+        <p>정답을 맞추면 홈페이지로 이동합니다.</p><br>
+           힌트 : SPA 
+        </p>
+        <p>질문:ZARA보고 놀란 가슴 000 가자</p>
+        <input type="text" id="answer" placeholder="답을입력하세요">
+        <button onclick="checkAnswer()">제출</button>
+        <p id="feedback">틀렸습니다. 다시 시도하세요.</p>
+    </div>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "H&M") {
+                window.location.href = "http://127.0.0.1:5500/website1-main/mini_pro0.html"; // 정답이면 홈페이지로 이동
+            } else {
+                document.getElementById("feedback").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
