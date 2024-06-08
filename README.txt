@@ -1,1 +1,1 @@
-Hello Good Bye
+It's seu-bul-jae
