@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <form>
+                전화번호: 010-1111-2222<br>
+                \d : decimal(10진수) -숫자하나<br>
+                \w : word - (문자하나)<br>
+                \s : space ,공백문자<br>
+                /^ : 시작<br>
+                $/ : 끝<br>
+                <input type="tel" name="tel" required 
+                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                title="####-####-####"><br>
+                <input type="submit" />
+            </form>
+        </body>
+    </head>

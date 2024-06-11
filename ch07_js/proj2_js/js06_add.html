@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <script>
+        function calc() {
+           let x = document.getElementById("x").value;
+           let y = document.getElementById("y").value;
+           let sum;
+           sum = parseInt(x)+parseInt(y);
+           document.getElementById("sum").value = sum;
+        }
+   
+       </script>
+</head>
+<body>
+  
+     <h3>더하기</h3>
+    <form name="myform" action="#" method="post">
+     a:<input id="x"/><br>
+     b:<input id="y"/><br>
+     c=a+b <input id ="sum"/><br/>
+
+        <input type="button" value="계산" onclick="calc();"/>
+    </form>
+    
+
+</body>
+</html>

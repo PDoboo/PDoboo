@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.h2{color: blue;}
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="h2">Contact us</h2>
+    [get방식] -url주소를 통해서 값을 전달.중요하지 않은 내용 전송<br>
+ex02.html에서 "제출"버튼을 누르면 form안에 있는 input 
+name과 value 값이 서버로 전송된다<br>
+:http://256.121.67.10.80/iframe.3.html?id=abcd&pw=1234
+27.0.0.1:5500/ch03_html.form_110/iframe3.html?name=hong&phone=010-1234-1234&email=hong%40hong.com&comments=<%2Ftd>%0D%0A++++++++++++++++++++++++++++
+<br>
+<br>
+[post방식] - 전송되는 내용의 body안에 내용을 실어서 서버에 전송, 보안이 중요할때 쓰는방식<br>
+
+    <form action="iframe3.html"method="get">
+        <table border="1"><!--table border="1"테이블 보더 = 테이블 줄 테두리-->
+            <tr>
+                <td>이름:</td>
+                <td><input type="text" value="hong" name="name" size="70" id="name1"></td>
+                </tr>
+                <tr>
+                    <td>전화번호:</td>
+                    <td><input type="tel"  name="phone" size="70"></td>
+                    </tr>
+                    <tr>
+                        <td>이메일:</td>
+                        <td><input type="email" value="hong@hong.com" name="email" size="70"></td>
+                        </tr>
+                        <tr>
+                            <td>남기고싶은말:</td>
+                            <td><textarea name="comments" rows="5" cols="50" size="70">
+                            </textarea>
+                            </td>
+                                <!-- </textarea>form 안에 여러줄 작성시 쓰는 태그 -->
+                            </tr>
+
+            
+        </table>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

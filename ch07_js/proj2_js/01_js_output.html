@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    javascript : 대소문자 구분, index=0번부터 시작,1(은두번째),2(는세번째),,,,<hr>
+    js output : innerHTML, Document.write(), window.alert(), console.log()<hr>
+    1. innerHTML<br>
+     <p id="demo">5+6을 연산한 결과 출력</p>
+     <p>2번째 p태그</p>
+     <p class="democ">2번째 p태그</p>
+     <script>
+       document.getElementById("demo").innerHTML = 5+6;
+       document.getElementsByTagName("p")[1].innerHTML = "Hello World!";
+       document.getElementsByClassName("democ")[0].innerHTML = "class name";
+        // let x = 5; 
+        // let y = 6;
+        // let z = x + y;
+        // document.getElementById("demo").innerHTML = z;  
+     </script>
+     <hr>
+      2.Document.write()<br>
+      <!-- 가장많이쓰는출력방법 -->
+       <script>
+        
+       document.write(5+6,"<br>"); 
+     
+       document.write("hello"+"<br>");
+        //줄바꿈을 하지 못해서 <br>을 같이 써줘야 한다. "" + "<br>" 문자열과 문자열의 연결
+      //"hello<br>"
+</script>
+<hr>
+3.console.log():F12-console창 출력<br>
+<script>
+    console.log("console:",5+6);
+    conslo.log("console2: " + "hello");
+</script>
+<hr>
+ 4.window.alert()<br>
+ <!-- window 새창 이란뜻 -->
+<script>
+window.alert(5+6);
+
+</script>
+
+</body>
+</html>

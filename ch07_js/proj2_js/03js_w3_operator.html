@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arithmetic</h1>
+<h2>The += Operator</h2>
+
+<p id="demo"></p>
+
+<script>
+var x = 10;
+document.write(x,"<br>");
+x =x+5; // x+=5
+//<-왼쪽의 식을 먼저 계산해서 x값을 ->오른쪽 식에 대입해 출력해라
+console.log("x: ",x);
+
+document.getElementById("demo").innerHTML = x;
+document.write(typeof x,"<hr>");
+var a=10;
+var b=20;
+//사칙연산 결과 출력//
+document.write(a+b +"<br>");
+document.write(a-b +"<br>");
+document.write(a*b +"<br>");
+document.write(a/b +"<br>");
+document.write(a%b +"<br>");
+
+let x1 = (5+6+"s"); //(왼쪽에서 오른쪽으로 계산 5+6의 값을 계산하고 문자열이 붙음 11s가 됨)
+// 숫자+숫자=연산된 숫자
+document.write("x : ",x1,"<br>");
+let y1 = "b"+5+6+"s"; // 문자열+숫자형 =문자열
+document.write("y: ",y1,"<br>");
+
+</script>
+
+</body>
+</html>

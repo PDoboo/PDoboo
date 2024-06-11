@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: 'Noto Sans KR', sans-serif;
+        list-style: none;
+        text-decoration: none;
+        border-collapse: collapse;
+        margin:0px;
+        padding: 0px;
+        color: #000;
+      }
+      
+      h1 {
+        font-size: 48px;
+        font-weight: 100;
+      }
+      .contents1{
+        font-size: 20px;
+        font-weight: lighter;
+      }
+      .contents2{
+        font-size: 18px;
+      }
+      .contents3 {
+        font-size: 14px;
+        font-weight: 100;
+      }
+      .contents1_bold{
+        font-size: 18px;
+        font-weight: bold;
+      }
+      /* --- */
+      
+      .result{
+        font-size: 24px;
+      }
+      .intro_bg {background-image:url("/website1-main/img/pic1.png");
+        width: 100%; height: 714px;}      
+
+      /* .intro_bg{
+        background-image: url("image/intro.png");
+        width: 100%;
+        height: 714px;
+      } */
+      
+      .header{
+        width:1280px;
+        margin:auto;
+        display:flex;
+        height: 86px;
+      }
+      .searchArea{
+        width:300px;
+        height:40px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        margin-top:24px;
+      }
+      .searchArea > form > input{
+        border:none;
+        width:250px;
+        height:40px;
+        background: rgba(0, 0, 0, 0.0);
+        color:#fff;
+        padding-left:10px;
+      }
+      .searchArea > form > span{
+        width:50px;
+        color:#fff;
+      }
+      .nav{
+        display: flex;
+        justify-content: flex-end;
+        width:calc(1280px - 300px);
+        line-height: 86px;
+      }
+      .nav > li {
+        margin-left:84px;
+      }
+      
+      .nav > li > a {
+        color: #fff;
+      }
+      
+      .amount{
+        position: relative;
+        top:-66px;
+        display: flex;
+        width:1280px;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+      }
+      .amount > li {
+        flex: 1;
+        height: 132px;
+      }
+      .amount > li > div {
+        text-align: center;
+        margin-top:37px;
+        height:57px;
+      }
+      
+      .amount > li:not(:last-child) > div{
+        border-right:1px solid #E1E1E1;
+      }
+      .intro_text{
+        width:100%;
+        margin:231px auto 231px auto;
+        text-align: center;
+      }
+      .intro_text > h1,
+      .intro_text > h4{
+        color:#fff;
+      }
+      
+      /* main_text0 */
+      
+      .main_text0{
+        width: 100%;
+        height:601px;
+        margin-top:-132px;
+        background: #f1f2f3;
+      }
+      .main_text0 > h1{
+        padding-top:116px;
+        text-align: center;
+      }
+      .main_text0 > .contents1 {
+        text-align: center;
+      }
+      
+      .icons{
+        display: flex;
+        width:1280px;
+        height: 302px;
+        /* background: orange; */
+        margin:auto;
+      }
+      .icons > li {
+        flex: 1;
+        background: white;
+        margin-top:49px;
+        height:302px;
+        text-align: center;
+      }
+      .icons > li > .icon_img{
+        margin-top:18px;
+      }
+      
+      .icons > li:not(:last-child){
+        margin-right: 20px;
+      }
+      
+      .icons .contents2 {
+        width:280px;
+        margin:auto;
+        letter-spacing: -1px;
+      }
+      .more{
+        width:100px;
+        height: 30px;
+        background: #2F7AF4;
+        color: #fff;
+        font-size: 12px;
+        line-height: 30px;
+        margin:25px auto;
+      }
+      
+      /* main_text1*/
+      
+      .main_text1{
+        width: 100%;
+        height:659px;
+        /* margin-top:-132px; */
+        /* background: #2F7AF4 */
+      }
+      .main_text1 > h1{
+        padding-top:50px;
+        text-align: center;
+      }
+      .main_text1 > .contents1 {
+        text-align: center;
+      }
+      .service {
+        width:1280px;
+        display: flex;
+        margin: 49px auto;
+        height:427px;
+      }
+      
+      .service > .contents2 {
+        padding: 20px;
+      }
+      .service > .contents2 > h2{
+        margin-bottom: 27px;
+      }
+      
+      /* main_text2 */
+      .main_text2 {
+        width:100%;
+        height:418px;
+        background-image: url("image/contact.png");
+      }
+      
+      .main_text2 > ul {
+        display: flex;
+        padding-top:138px;
+      }
+      
+      .main_text2 > ul > li {
+        flex: 1;
+        text-align: center;
+      }
+      .main_text2 > ul > li > div,
+      .main_text2 > ul > li > div > h1{
+        color: #fff;
+      }
+      .more2{
+        width:220px;
+        height:40px;
+        border: 1px solid #fff;
+        color: #fff;
+        line-height: 40px;
+        cursor: pointer;
+        margin:16px auto;
+      }
+      
+      .footer{
+        display: flex;
+        background: #1f1f1f;
+        padding:30px;
+      }
+      .footer > div:first-child {
+        flex:3;
+        text-align: center;
+        color: #fff;
+      }
+      .footer > div:last-child {
+        flex:9;
+        color: #fff;
+      }
+      
+</style>
+</head>
+  <body>
+    <div class="wrap">
+      <div class="intro_bg">
+        <div class="header">
+          <div class="searchArea">
+            <form>
+              <input type="search" placeholder="search">
+              <span>검색</span>
+            </form>
+          </div>
+          <ul class="nav">
+            <li><a href="">홈</a></li>
+            <li><a href="/ch04_CSS1/coffee1p144.html">커피</a></li>
+            <li><a href="https://m.work.go.kr/consltJobCarpa/jobPsyExamNew/conslt/jobPsyExamConsltList.do" taget="_self">직업상담</a></li>
+            <li><a href="/website1-main/inmini_pro/s2.html">실업지원</a></li>
+            <!-- <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">CONTACT</a></li> -->
+          </ul>
+        </div>
+        <div class="intro_text">
+            <h1>NEW LIFE</h1>
+           <h4 class="contants1">삶의 안정을 위해 직업과 실업지원에 대한 정보를 제공합니다</h4>
+          <!-- <h1>총알오징어, 세마리에 만원</h1>
+          <h4 class="contents1">우리는 전기를 이용해 실수인척 새끼 오징어를 불법 포획합니다</h4> -->
+        </div>
+      </div>
+      </div>
+      <!-- intro end-->
+      <ul class="amount">
+        <li>
+          <div>
+            <div class="contents1">지금까지 해먹은 돈</div>
+            <div class="result">$128,021</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="contents1">씨를 말린 오징어 마릿수</div>
+            <div class="result">93,234</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="contents1">최종 목표 마릿수</div>
+            <div class="result">100,000+</div>
+          </div>
+        </li>
+        <li>
+            <div>
+              <div class="contents1">와사비 간장</div>
+              <div class="result">57,221,084</div>
+            </div>
+        </li>
+      </ul>
+      <!-- amount end -->
+
+      <div class="main_text0">
+        <h1>ABOUT</h1>
+        <div class="contents1">우리는 재규어처럼 재빠르게, 남들과는 다르게 오징어를 낚아챕니다.</div>
+        
+        <ul class="icons">
+          <li>
+            <div class="icon_img">
+              <img src="image/icon2.svg">
+            </div>
+            <div class="contents1_bold">치밀한 계획</div>
+            <div class="contents2">
+                우리는 계획적으로 단속을 피해서 치밀하게 일을 처리합니다
+            </div>
+            <div class="more">
+              MORE
+            </div>
+          </li>
+
+          <li>
+            <div class="icon_img">
+              <img src="image/icon0.svg">
+            </div>
+            <div class="contents1_bold">은신 기술자 확보</div>
+            <div class="contents2">
+                우리는 언제든지 환술에 걸린것처럼 순식간에 시야에서 사라질 수 있습니다
+            </div>
+            <div class="more">
+              MORE
+            </div>
+          </li>
+
+          <li>
+            <div class="icon_img">
+              <img src="image/icon1.svg">
+            </div>
+            <div class="contents1_bold">한번에 쓸어담기</div>
+            <div class="contents2">
+                다량의 오징어를 한번에 싹쓸이 하여 시중에 유통할 수 있는 기술력이 있습니다
+            </div>
+            <div class="more">
+              MORE
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main_text1">
+        <h1>SERVICE</h1>
+        <div class="contents1">엄격한 유통과정으로 까다로운 미식가들에게 납품하고 있습니다</div>
+        <div class="service">
+          <div class="food_photo">
+            <img src="image/food.png">
+          </div>
+          <div class="contents2">
+              <h2>이것이 오징어야, 문어야?</h2>
+              이것이 오징어인지 문어인지 헷갈리시는 분들도 있을거에요. <br>
+              왜냐면 이것은 그냥 Pixabay에서 오징어라고 검색했더니 나온 이미지인데 <br>
+              오징어 같은 아무것이나 검색이 된것 같아요. <br><br>
+              
+              총알오징어는, 사실 어떤 특정한 품종을 가진 게 아니랍니다. <br>
+              우리가 사먹지 말아야 한다는 것이죠. <br>
+              불과 약 5년전만 해도 시장에 가면 냉동오징어 한마리에 천원이면 샀는데, <br>
+              이젠 두마리에 7~8천원씩 하니, 더이상 서민음식이 아니게 된거죠. <br><br>
+              
+              얼마전에는 가격을 비교해 보았더니 마른오징어를 기준으로 <br>
+              같은 그람수에 같은 가격이 나올 정도로 천정부지로 오징어값이 치솟았답니다. <br>
+              그런 오징어, 못생겼다고 놀리지 말고 <br>
+              이제 소중하게 대해주어야 하지 않을까요?<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_text2">
+        <ul>
+          <li>
+            <div><h1>CONTACT</h1></div>
+            <div>우리에게 파트너십을 신청하거나, 고객이 되어주세요</div>
+            <div class="more2">더 알아보기</div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <div>LOGO</div>
+        <div>
+          CEO. 타모디자인 <br>
+          Addr. 서울특별시 금천구 가산1로 280-3 우림하이엔드타워 6차 14F 고객상담실 Fax/Tel. <br>
+          02 - 223 -2912~5 <br>
+          COPYRIGHT 2019. TAMO. ALL RIGHT RESERVED.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

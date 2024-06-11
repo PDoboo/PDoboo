@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  1. class : 객체를 생성하기 위한 틀, template 클래스 이름은 대문자로 시작<br> 
+    <p id="show"></p>
+    <script>
+    class Member {
+        //생성자 -객체생성시 초기값 저장하는용도
+        constructor (name,age){
+            this.name = name;//홍길동1
+            this.age = age;//20
+            }; 
+        
+         getAge(){ 
+            return "나이는 "+this.age+ "입니다.";
+         }
+         }
+                 
+        //객체생성 new 를쓰면 Member의 값이 위에 입력됨 
+            // const mem0 = new Member();
+            const mem1 = new Member("홍길동",40);
+     
+    //         let text ="";
+    //    text += mem1.id+"<br>";
+    //    text += Member.company;
+       
+    //    document.getElementById("show").innerHTML = text;
+             
+       let text ="";
+       text += mem1.name+"<br>";
+       text += mem1.getAge();
+       
+       document.getElementById("show").innerHTML = text; 
+      </script>
+<hr>
+2. class의 상속(상속:extends)<br>
+ 하나의 클래스에서 부모가 가지고 있는 자원과 기능을 확장해 사용<br>
+<p id="show"></p>
+<script>
+    //부모 클래스
+class Member2 {
+    //생성자 -객체생성시 초기값 저장하는용도
+    constructor (name,age){
+        this.name = name;//홍길동1
+        this.age = age;//20
+        }; 
+    
+     getName(){ 
+        return "나이는 "+this.name+ "입니다.";
+     }
+     }
+//student class - Member class로부터 상속받음(property,method)          
+// 자식클래스
+class student extends Member2 {
+    //생성자 역할 - 초기값 저장용도
+    constructor (name,age,school){
+        super(name,age);//super(): 부모생성자
+        // this.name = name;
+        // this.age = age;
+        this.school =school;//자식 추가
+        } 
+//메소드 
+      intro(){
+            return this.getName()+" "+this.school+" 학생입니다.";
+        }
+    }
+     const st1 = new student("홍길동",30,"한국고");
+     document.getElementById("show").innerHTML = st1.intro();
+
+     </script>
+</body>
+</html>

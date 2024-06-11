@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          input[type="text"], textarea{
+            width: 90%;
+            border: 2px solid blue; /* 파란색 테두리 */
+            margin: 10px 0;
+            padding: 6px 10px; /* 패딩 추가 */
+            display: inline-block;
+            border-radius: 4px; /* 테두리 둥글게 설정 */}
+            input[type="text"]:hover {background-color: bisque;}
+            input[type="text"]:focus{font-size: 1.2em;}
+            input[type="submit"] {background-color: green;
+                                 border: none;
+                                 color: white;
+                                 padding: 16px 32px;}
+        </style>
+    </head>
+    <body>
+        <h2>상품 평</h2>
+        <p>받으신 상품을 평가해주세요.</p>
+        <div>
+            <form action="/ch04_CSS1/selector7p142.html" method="get" name="form">
+                <label for="name">이름</label>
+                <input type="text" id="name" class="name"name="name" placeholder="이름"><br>
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" placeholder="이메일"><br>
+                <label for="subject">상품 평</label>
+                <textarea id="subject" name="subject" placeholder="상품을 평가해주세요"
+                style="height: 100px;"></textarea><br>
+
+            <input type="submit" value="submit">
+        </form>
+        </div>
+    </body>
+    </html>

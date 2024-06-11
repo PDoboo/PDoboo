@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script> 
+<!-- 구글 j쿼리 검색 후 홈페이지 -> 다운로드 -> 하단에 j쿼리CDN -> j쿼리 3.x 의 uncompressed 누르고 코드복사 -->
+<script>
+    //$붙어있으면 jQuery
+$(document).ready(function(){
+  $("#p1").hover(function(){
+    alert("You entered p1!");
+  },
+  function(){
+    alert("Bye! You now leave p1!");
+  }); 
+});
+// 마우스를 올리면 두개의 경고창(alert)이 뜬다 function()에 ()이름이 없으면 걍 실행
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>

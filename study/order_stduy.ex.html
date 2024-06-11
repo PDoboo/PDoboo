@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 작성하기</title>
+<style>
+    div.centered {text-align: center;}
+ul {list-style: none;} 
+label.tit { font-weight: bold; width: 80px; float: left;}
+fieldset legend { font-size:18px; color: purple;
+      font-weight: bold;}
+      fieldset {margin:15px 10px; background-color: beige;}
+      ul li{margin-bottom: 10px;}
+</style>
+<!--ul의 점을 없애는 태그 list-style-->
+</head>
+<body>
+    <form action="#" method="get"><!--#은 링크를 뜻함-->
+    <h1>상품 주문서</h1>
+<fieldset>
+    <legend>개인정보</legend>
+    <ul>
+        <li>
+            <label for="uname" class="tit">이름</label>
+            <input type="text" id="uname" placeholder="여백없이 입력" required><!--placeholder="작성칸의 힌트를 보여준다"-->
+        </li>
+        <li>
+            
+                <label for="tel1" class="tit">연락처</label>
+                <input type="text" id="tel1" placeholder="연락가능한 번호" required><!--required="이 속성이 추가된 필드는 사용자가 값을 입력하지 않으면 폼을 제출할 수 없게 됩니다"-->
+            
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>배송지 정보</legend>
+    <ul>
+       <li>
+    <label for="addr" class="tit">주소</label>
+    <input type="text" size="40" id="addr" required>
+       </li>
+       <li>
+        <label for="tel2" class="tit">전화번호</label>
+    <input type="number" id="tel2" required>
+       </li>    
+        <li>
+        <label for="comment" class="tit">메모</label>
+        <textarea id="comment" rows="5"clos="90"></textarea>
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>주문정보</legend>
+    <ul>
+        <li>
+            <input type="checkbox" id="phone" name="order" value="guatemala">
+            <label for="phone" class="tit"></label>과테말라 안티구아(100g)</label>
+            <input type="text" id="uname" placeholder="0" required>개
+        </li>
+        <li>
+            <input type="checkbox" id="item1" name="order" value="guatemala">
+            <label for="number" class="item1">인도네시아 만델링(100g)</label>
+            <input type="text" id="uname" placeholder="0" required>개
+            </li>
+            <input type="checkbox" id="item1" name="order" value="guatemala">
+            <label for="number" class="item1">탐라는도다 블랜딩(100g)</label>
+            <input type="text" id="uname" placeholder="0" required>개
+        </ul>
+        <div class="centered">
+            <input type="submit" value="주문하기">
+        <input type="reset" value="다시 작성">      
+        </div>
+    </fieldset>
+
+
+</form>
+</body>
+</html>

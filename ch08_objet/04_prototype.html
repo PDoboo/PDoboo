@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    prototype(ES6): 클래스 없이 프로토타입을 이용해서 객체생성<br>
+    객체: 속성+메소드<br>
+    클래스: 틀<br>
+    인스턴스: 생성된 객체 하나 하나 각각<br>
+    모든 자바스크립트 객체는 프로토타입 객체로부터 property & method를 상속받음<br>
+    <hr>
+    1.생성자 함수 추가 후 메소드 또 추가<br>
+    <p id="show"></p>
+<script>
+    //생성자 함수
+    //이미 생성된 생성자 함수에서 새로운 프로퍼티를 추가하는건 불가
+    //property는 생성자 함수 안에 존재해야 함 => 
+    //=>prototype 사용
+    function Member (id,name,age){
+        this.id = id;//hong1
+        this.name = name;//홍길동1
+        this.age = age;//20
+        };
+     
+        // Member.company ="현대"; 
+        // property 추가불가
+
+        Member.prototype.company ="현대"; 
+        Member.prototype.getId = function() {
+            return "아이디는"+this.id+"입니다.";
+        }
+      
+
+    //객체생성 new 를쓰면 Member의 값이 위에 입력됨 
+        // const mem0 = new Member();
+        const mem1 = new Member("hong","홍길동",40,"스불재");
+ 
+//         let text ="";
+//    text += mem1.id+"<br>";
+//    text += Member.company;
+   
+//    document.getElementById("show").innerHTML = text;
+         
+   let text ="";
+   text += mem1.company+"<br>";
+   text += mem1.getId();
+   
+   document.getElementById("show").innerHTML = text; 
+  </script>
+</body>
+</html>

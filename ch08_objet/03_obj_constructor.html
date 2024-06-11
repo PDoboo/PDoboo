@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    생성자 함수(Constructor)-객체를 생성시, 초기값저장<br>
+    함수이름은 영문자 대문자(일반함수와 구별하기위해,일반함수는 소문자)<br>
+    <p id="show"></p>
+  <script>
+    //생성자 함수
+    function Member(id,name,age){
+        this.id = ids;//hong1
+        this.name = names;//홍길동1
+        this.age = age;//20
+    }; //객체생성 new 를쓰면 Member의 값이 위에 입력됨 
+        // const mem0 = new Member();
+        const mem1 = new Member("hong1","홍길동1",20);
+        const mem2 = new Member("hong2","홍길동2",30);
+        const mem3 = new Member("hong3","홍길동3",40);
+ 
+        // 위 3개의 객체를 출력하기(name만 출력하기)
+        //홍길동1
+        //홍길동2
+        //홍길동3
+        let text ="";
+   text += mem1.name+"<br>"; 
+   text += mem2.name+"<br>"; 
+   text += mem3.name+"<br>"; 
+
+   document.getElementById("show").innerHTML = text;
+         
+  </script>
+<hr>
+2. 생성자 함수의 메소드<br>
+<p id="show2"></p>
+<script>
+    //생성자 함수
+    function Member2 (id,name,age){
+        this.id = id;//hong1
+        this.name = name;//홍길동1
+        this.age = age;//20
+        this.getName = function (){ 
+            return "나의 이름은"+this.name+"입니다.";
+        }
+    };
+    //객체생성 new 를쓰면 Member의 값이 위에 입력됨 
+        // const mem0 = new Member();
+        const mem4 = new Member2("hong4","홍길동4",40);
+ 
+        let text2 ="";
+   text2 += mem4.id+"<br>";
+   text2 += mem4.getName()+"<br>";  
+  
+   document.getElementById("show2").innerHTML = text2;
+         
+  </script>
+</body>
+</html>

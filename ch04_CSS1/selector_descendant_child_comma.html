@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div{ border: 1px solid blue; }
+div + p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+[selector(선택자)]<br>
+div > p : child(자식 선택자)에서만 css적용<br>
+div,p : group(그룹 선택자)로 각각 적용<br>
+div  p : descendant(자손=자식+손주이하)다 적용<br>
+div + p : div옆에 가장 가까운 형제 하나에 css 적용<br>
+div ~ p : 일반형제 선택자 div옆에있는 모든형제에 css적용<br>
+<h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+</body>
+</html>
+

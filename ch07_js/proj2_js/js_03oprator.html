@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    = : 할당연산자<br>
+    == : type, value중에서 valuer값만 비교<br>
+    === : type, value 일치여부. JavaScript에만 있음<br>
+<h1>JavaScript String Operators</h1>
+<p>Note that strings are compared alphabetically:</p>
+
+<p id="demo"></p>
+
+<script>
+let text1 = "20"; //type-string value =20 " ",' ',안에있으면 문자열
+let text2 = "5"; //type-string value = 5
+let result = text1 < text2;
+document.getElementById("demo").innerHTML = "Is 20 less than 5? " + result;
+// x1= (text1 = text2);
+// document.write("x1: ",x1,"<br>");
+
+x2= (text1 == text2);
+document.write("x2: ",x2,"<br>");
+
+x3= (text1 === text2);
+document.write("x3: ",x3,"<br>");
+
+
+</script>
+
+</body>
+</html>

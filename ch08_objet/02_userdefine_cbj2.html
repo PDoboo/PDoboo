@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+  객체-property(변수)+method(함수)<br>
+  this-현재 객체<br>
+  1.method 기본 <br>  
+  <p id="show"></p>
+    <script>
+     const member ={ //const는 변수재설정이 불가해서 새로운 함수를 추가 해야 한다.
+       id:"hong",
+       name:"홍길동",
+       age:20,
+       intro:function(){ 
+        return "나의 이름은 "+this.name+"입니다";
+       }
+       }; 
+    document.write("2.method추가","<br>");
+    //메소드 만들기 (property이름: getAge)
+    //내용: "나이는 "+( )+"입니다";     
+        member.getAge =function(){
+            return"나이는 "+this.age+"입니다";   
+        }
+
+        document.write(member.intro(),"<br>");
+        document.getElementById("show").innerHTML = member.intro(); 
+       //오른쪽 값text는 왼쪽의 식을 연산해 출력한다, initial-scale=1.0">
+       document.write(member.getAge(),"<br>");
+       document.getElementById("show").innerHTML = member.getAge(); 
+       </script>
+       <hr>
+       3. built-in(내장)메소드<br>
+       toFixed(1)-Number객체의 메소드로 소수점이하부분을 반올림한 문자열 반환<br>
+       <script>
+        let x = 12.45245;
+        document.write(x.toFixed(1),"<br>"); //toFixed() 소수점 밑 자리수 알려줌
+        document.write(x.toFixed(3),"<br>");
+       </script>
+        <p id="show2"></p>
+       <script>
+        let x2 = "I am student"; 
+        document.getElementById("show2").innerHTML = x2.toUpperCase(); //대문자로 바꾸는 함수 찾아 적용
+        </script>
+        </body>
+</html>

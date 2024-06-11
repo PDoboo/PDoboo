@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js var type</title>
+</head>
+<body>
+    x=10;<br>
+    <script>
+        // datatype
+        //0. undefined - 변수 정의가 되지 않음
+        let k;
+        document.write(k+"<br>");
+        document.write(typeof k,"<br>");
+
+        //1.datatype - number (정수,실수)
+        let x=10;
+        document.write(x+"<br>");
+        document.write(typeof x,"<br>"); //x 가 10에 해당되는 type 출력 숫자면number라고표시됨
+
+         x=10.8;//실수
+        document.write(x+"<br>");
+        document.write(typeof x,"<br>"); 
+
+        x="10.8";// 2.string 문자열 타입
+        document.write(x+"<br>");
+        document.write(typeof x,"<br>"); 
+
+        x=10>8;// 3.boolean 타입 참(true),거짓(false)값만을 가짐
+        document.write(x+"<br>");
+        document.write(typeof x,"<br>"); 
+        
+        x={a:10,b:20,c:30};// 4.object타입 객체형 
+        document.write(x.a+"<br>"); //x.a - x 안에 a의 값 표시
+        document.write(typeof x,"<br>"); 
+
+        //5. template literal 타입 
+        x=10.8; //백틱 `` 사용한 경우 : ${변수}
+        document.write(`hello ${x}점`+"<br>");
+        
+    </script>
+</body>
+</html>

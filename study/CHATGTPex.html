@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        background-color: lightblue;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #wrapper {
+        width: 800px;
+        margin: 0 auto;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center; /* 이미지를 가운데로 정렬 */
+        align-items: center;
+        height: 100px;
+        background-color: white;
+        padding: 20px;
+    }
+    
+    header img {
+        max-width: 400px; /* 이미지 최대 너비 설정 */
+        height: auto; /* 높이 자동으로 조정 */
+    }
+    
+    ul {
+        list-style: none;
+        text-align: center;
+        border-top: 2px solid rgb(128, 0, 0);
+        border-bottom: 2px solid #800000;
+        padding: 10px 0px;
+    }
+    
+    ul li {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 20px;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: rgb(37, 1, 104);
+    }
+    
+    ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .car1 h4 { 
+        font-family: bold;
+        padding: 0px;
+    }
+    
+    .nav h2 p {
+        text-align: center;
+    }
+    
+    .box h2 {
+        font-size: 30px;
+        margin: 40px 30px;
+    }
+    
+    .box p {
+        font-size: 15px;
+    }
+    
+    .box h2 p {  float: center;
+      
+    }
+    
+    .box2 input[type="text"] {
+        flex: 1; /* input 요소가 가능한 최대한의 공간을 차지하도록 설정 */
+        margin-right: 50px; /* input 오른쪽 여백 */
+    }
+    
+    .box2 button {
+        float: right; /* 버튼을 오른쪽으로 띄움 */
+    }
+    
+    section {
+        display: flex;
+        justify-content: space-between; /* 자식 요소들을 균등하게 배치 */
+        align-items: flex-start; /* 자식 요소들을 위쪽으로 정렬 */
+        width: 100%; /* 부모 요소의 너비만큼 */
+        padding: 20px; /* 여백 추가 */
+        box-sizing: border-box;
+    }
+    
+    article {
+        flex: 1; /* article이 가능한 최대 공간을 차지하도록 설정 */
+        margin: 0 20px; /* 좌우 여백 추가 */
+        padding: 20px;
+        border: 1px solid black;
+        background-color: white; /* 배경색 설정 */
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    aside {
+        text-align: center;
+        font-size: 13px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+    }
+    
+    .car1 ul li {
+        border-top: none;
+        border-bottom: none;
+    }
+    
+    .car1 {
+        font-size: 15px;
+    }
+    
+    .car2 {
+        font-size: 15px;
+    }
+    
+    footer {
+        background-color: #f1f1f1;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    .footer-image {
+        width: 800px;
+        height: 50px;
+    }
+</style>    
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="/images_all/light-bulb2.png" width="70" height="80" alt="Header Image">
+            <a href="source.html"></a>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="source.html">홈</a></li>
+                <li><a href="/ch04_CSS1/coffee1p144.html">커피</a></li>
+                <li><a href="/website1-main/inmini_pro/s1.html">실업급여</a></li>
+                <li><a href="/website1-main/inmini_pro/s2.html">실업지원</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <h2>쉼cafe</h2>
+            <p>안녕하세요. 쉬어가는 간단한 탐색 공간입니다.</p>
+            <div class="box2">
+                <input type="text"><button>검색</button>
+            </div>
+        </div>
+        <section>
+            <aside class="car1">
+                <nav>
+                    <ul>
+                        <h4>카테고리</h4>
+                        <li><a target="iframe1" href="/ch04_CSS1/coffee1p144.html">커피</a></li><br>
+                        <li><a href="https://m.work.go.kr/consltJobCarpa/jobPsyExamNew/conslt/jobPsyExamConsltList.do" target="_self">직업상담</a></li><br>
+                        <li><a href="http://www.work.go.kr" target="_self">구직안내</a></li><br>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="at1">
+                <h2>오늘의 안내</h2>
+                <h3>실업급여</h3>
+                <p>지원목적</p>
+                고용보험 가입 근로자가 비자발적 사유로 이직하여 
+                재취업활동을 하는 기간에 구직급여 등을 지급함으로써
+                생활 안정 및 조속한 노동시장 복귀 지원
+            </article>
+            <aside class="car2">
+                <fieldset>
+                    <legend>방문자 인적사항</legend>
+                    이름: <input type="text" name="name" value=""><br>
+                    이메일: <input type="text" name="mail" value=""><br>
+                    <input type="submit" value="입력">
+                </fieldset>
+            </aside>
+        </section>
+        <footer>
+            <img src="path-to-your-footer-image.jpg" alt="Footer Image" class="footer-image">
+        </footer>
+    </div>
+</body>
+</html>

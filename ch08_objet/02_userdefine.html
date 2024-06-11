@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show"></p>
+     <script>
+      const member ={
+        id:"hong",
+        name:"홍길동",
+        age:20
+        }; 
+        let text; 
+         text = member.id +" "+member.name+" "+member.age;
+         document.write(text,"<br>");
+         document.getElementById("show").innerHTML = text; 
+        //오른쪽 값text는 왼쪽의 식을 연산해 출력한다
+     </script>
+<hr>
+
+// kor, eng, math ,sum, avg;<br> 출력:합계:270,평균90<br>
+(.)연산자 = []사용가능<br>
+<script>
+ const score = { 
+    kor:"90",
+    eng:"80",
+    math:"100"
+    
+ }
+
+ let sum,avg; 
+//   sum = score.kro+" "+score.eng+" "+score.math; 방법1
+  sum = score["kor"]+score["eng"]+score["math"]; //방법2
+  avg = sum/3;
+  document.write("합계: ",sum);
+  document.write(" 평균: ",avg,"<br>");
+  document.getElementById("show").innerHTML = "합계: "+sum+"  평균: "+avg;
+</script>
+<hr>
+<!-- [for in 문으로 property읽기]<br>
+<p id="show2"></p>
+<script>
+ const member2 ={
+   id:"hong",
+   name:"홍길동",
+   age:20
+   }; 
+   let text2; 
+    text2 = member2.id +" "+member2.name+" "+member2.age;
+    document.write(text2,"<br>");
+    document.getElementById("show2").innerHTML = text2; 
+   //오른쪽 값text는 왼쪽의 식을 연산해 출력한다
+</script> -->
+ <hr>
+<!-- <script>
+ const member2 = 
+ {id:"hong", name:"홍길동", age:20}; 
+  //객체에 내용 추가하기
+  member2.email="ksandgk@gmail.com";
+ //객체의 property 삭제하기
+ delete member2.id; 
+ 
+let text2 = " "; // " "; "로 문자열 표시해준다"
+for ( x in member2) {
+  text2 += member2[x] +"<br>"; //txt = txt+person[x]+" "
+}
+// text2 = member2.id +" "+member2.name+" "+member2.age;
+document.write(text2,"<br>"); 
+document.getElementById("show2").innerHTML = text2;
+</script> -->
+<hr>
+[중첩객체-객체안의 객체]<br>
+<p id="show3"></p>
+<script>
+
+ const member3 ={
+   id:"hong",
+   name:"홍길동",
+   age:20,
+   
+   hobby:{
+    h1:"게임",
+    h2:"축구",
+    h3:"기타"
+   }
+   }; 
+   let text3= " "; 
+  //  text3 = member3.hobby.h1+"<br>"+member3.hobby.h2+"<br>"+member3.hobby.h3+" ";
+
+  //  text3 += member3.hobby.h1+"<br>"; // +=누적
+  //  text3 += member3.hobby.h2+"<br>";
+  //  text3 += member3.hobby.h3;
+ // [] 방식  
+   text3 += member3["hobby"]["h1"]+"<br>"; // +=누적
+   text3 += member3["hobby"]["h2"]+"<br>";
+   text3 += member3["hobby"]["h3"];
+
+//    for ( x in member3) {
+//   text2 += member3[x] +"<br>"; //txt = txt+person[x]+" "
+// }
+// text2 = member2.id +" "+member2.name+" "+member2.age;
+document.write(text3,"<br>"); 
+document.getElementById("show3").innerHTML = text3;
+
+</script>
+
+
+
+</body>
+</html>

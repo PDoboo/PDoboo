@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+      <mata charset="utf-8">
+            <title>주문서 작성하기</title>
+    
+<style>
+legend {
+      color: purple;
+      font-size: 18px;
+      font-weight: bold;}
+      div.centered {text-align: center;}
+ul {list-style: none;} 
+label.tit { font-weight: bold; width: 80px; float: left;}
+</style>
+</head>
+<body>
+<h1>상품주문서</h1>
+
+    
+<form action="/action_page.php" method="post">
+    <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+            <li>
+                <label for="uname" class="tit">이름</label>
+                <input type="text" id="uname" placeholder="여백없이 입력" required><!--placeholder="작성칸의 힌트를 보여준다"-->
+            </li>
+            <li>
+                
+                    <label for="tel1" class="tit">연락처</label>
+                    <input type="text" id="tel1" placeholder="연락가능한 번호" required><!--required="이 속성이 추가된 필드는 사용자가 값을 입력하지 않으면 폼을 제출할 수 없게 됩니다"-->
+                
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>배송지 정보</legend>
+        <ul>
+           <li>
+        <label for="address" class="tit">주소</label>
+        <input type="text" id="address">
+           </li>
+           <li>
+            <label for="phone" class="tit">전화번호</label>
+        <input type="number" id="phone">
+           </li>    
+            <li>
+            <label for="memo" class="tit">메모</label>
+            <textarea name="comment" id="memo" rows="10" clos="70"></textarea>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>주문정보</legend><!--선생님 코드 작성-->
+        <ul>
+            <li>
+                <label><input type="checkbox">사과(100g)</label>
+                <label><input type="number" value="0" min="0" max="5">개</label>
+            </li>
+            <li>
+                <label><input type="checkbox">수박(100g)</label>
+                <label><input type="number" value="0" min="0" max="5">개</label>
+                    
+                </li>
+                <label><input type="checkbox">참외(100g)</label>
+                <label><input type="number" value="0" min="0" max="5">개</label>
+                    
+            </ul>
+            <div class="centered">
+                <input type="submit" value="주문하기">
+            <input type="reset" value="다시 작성">      
+            </div>
+    </fieldset>
+   </form>
+   
+</body>
+</html>
