@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script>
+ function Student(name, korean, math, english, science) {
+ // 생성자함수 
+ this.이름 = name;
+ this.국어 = korean;
+ this.수학 = math;
+ this.영어 = english;
+ this.과학 = science;
+ // 메서드
+ this.getSum = function () {
+    return this.국어 + this.수학 + this.영어 + this.과학;   
+};
+ this.getAverage = function () {
+    return this.getSum() / 4 ; 
+};
+// 결과에 나올 내용  
+this.toString = function () {
+    return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage(); 
+};
+ }
+ // 학생 정보 배열을 만듭니다.
+ // array.push() - 배열끝에 내용추가
+ var students = [];
+ var a = 10; // 10이 들어있음.
+ //var a2 = 10,20; 안됨
+ var a3 = [10,20]; //여러개 데이터를 사용. a3에는 주소값이 들어있다.
+ students.push(new Student('윤인성',87, 98 ,88, 95));
+ students.push(new Student('연하진',92, 98 ,96, 98));
+ students.push(new Student('구지연',76, 96 ,94, 90));
+ students.push(new Student('나선주',98, 92 ,96, 95));
+ students.push(new Student('윤아린',95, 98 ,98, 98));
+ students.push(new Student('윤명월',64, 88 ,92, 92));
+ students.push(new Student('김미화',82, 86 ,98, 88));
+ students.push(new Student('김연화',82, 86 ,98, 88));
+ students.push(new Student('박아현',97, 92 ,88, 95));
+ students.push(new Student('서준서',45, 52 ,72, 78));
+// 출력합니다.
+
+
+var output = '이름\t총점\t평균\n';
+ for (var i in students) {
+    output += students[i].toString() + '\n';
+}
+alert(output);
+
+ </script>
+</head>
+<body>
+
+</body>
+</html>

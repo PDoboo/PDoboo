@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj_String</title>
+</head>
+<body>
+    <script>
+        function checkID(){ 
+            let s =document.getElementById("id").value;
+            if (s.length < 6)
+            alert ("아이디는 6글자여야함.");
+        }           
+        
+    </script>
+   아이디 뭐임:&nbsp;<input type ="text" id="id" size="20px">
+   <button onclick="checkID()">검사</button><br>
+   <hr>
+   str_indexOf: 메소드는 문자열 안에서 주어진 텍스트가 처음 등장하는위치를 반환한다.<br>  
+<script>
+    let a = "A bad workman always blames his tools.";
+    let n = a.indexOf("workman");
+    document.write(n+"<br>"); //6 
+</script>
+
+
+
+
+</body>
+</html>

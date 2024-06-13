@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object dateP316</title>
+</head>
+<body>
+    <p>날짜와 시간 나타내기</p>
+    <script>
+        let d1 = new Date(2024, 6, 12, 0, 0, 0);//년도,날짜,시간 지정가능
+        let d2 = new Date("June 12, 2024 08:07:00");//문자열로 생성가능
+
+        document.write("2024, 6, 12 ====> " + d1 + "<br>");
+        document.write("june 12, 2024  08:07:00 ====> " + d2 + "<br>");
+   </script>
+<hr>
+<p>obj_date.1</p>
+<script>
+    let today= new Date();
+    document.write(today + "<br>");
+    document.write(today.getFullYear() +"년<br>");
+    document.write(today.getMonth() + 1 +"월<br>");
+    document.write(today.getDate() +"일<br>");
+    document.write(today.getHours() +"시<br>");
+    document.write(today.getMinutes() +"분<br>");
+    document.write(today.getSeconds() +"초<br>");
+    document.write(today.toLocaleDateString() +"<br>");
+
+</script>
+<hr>
+<p>obj_date.2</p>
+<script>
+  let date1 = new Date("07/30/2022");
+  let date2 = new Date("08/30/2022");
+
+  let diff = date2.getTime() - date1.getTime();
+  let diff_days = diff / (1000 * 3600 * 24);
+  document.write(date1 + "<br>와<br>" + date2 + "<br>날짜간의 총 일수: " + diff_days);
+   
+   </script>
+</body>
+</html>

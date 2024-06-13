@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    숫자 2개, 연산자 를 입력 받아서 사칙연산(+,-,*,/)을 계산 <br>
+     10/2=5 출력<br>
+     break:반복문장을 탈출한다.<br>
+  <script>
+   let num1 = parseInt(prompt("숫자입력1"));
+   let num2 = parseInt(prompt("숫자입력2"));
+   let operator = prompt("사칙연산입력(+,-,*,/)");
+switch (operator) {
+  case '+':
+    result= num1+num2;
+    document.write(num1+"+"+num2+"="+result);
+    break;
+  case '-':
+  result= num1-num2;
+  document.write(num1+"-"-num2-"="+result);
+    break;
+  case '*':
+  result= num1*num2;
+  document.write(num1+"*"+num2+"="+result);
+    break;
+  case '/':
+  result= num1/num2;
+  document.write(num1+"/"+num2+"="+result);
+  break;
+ default:document.write("예외가 입력되었을 경우 해당-입력오류");
+ break;
+}
+
+
+    </script>
+</body>
+</html>

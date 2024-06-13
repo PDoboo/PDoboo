@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for.while.dowhile</title>
+</head>
+<p id="demo"></p>
+<body>
+    "안녕" 글자를 세번 반복 - for,while,dowhile<br>
+    1.for문<br>
+    <script>
+    for (let i = 0; i < 3; i++) {
+        document.write("안녕" + "<br>");
+      }
+    </script>
+
+    2.while문:한번도 수행 하지 않을수 있음.<br>
+    <script>
+     let i = 0;
+    while (i < 3) {
+        document.write("안녕" + "<br>");
+       i++;
+     }</script>
+
+    3.do~while문:반드시 한번은 수행.<br>
+     <script>
+      let j = 0;
+     do {
+    document.write("안녕" + "<br>");
+      j++;
+      }
+      while (j < 3);
+     document.getElementById("demo2").innerHTML = text3;
+     </script>
+<hr>
+ 1~10까지 합계 구하기 for,while,do while 로 <br>
+  4.for 문
+<script>
+    let sum =0;
+    for (let i = 1; i <= 10; i++) {
+        sum += i;
+      }
+      document.write("합계: "+sum+"<br>");
+</script>
+  5. while 문
+  <!-- <script>
+    let val = 0;
+    let a = 0;
+    while (a<=10) { val = val + a; a++;}
+    document.write("val: " +val+ "<br>");
+  </script> -->
+ 
+ <script>
+    let s = 0;
+    let so = 1;
+    while (so<=10) {
+        s += so; 
+        so++;
+    }
+    document.write("합계: "+s+"<br>");
+  </script>
+
+ 6.do while 문
+ <script>
+  let t = 1;
+   sum6 = 0;
+   do { sum6 += t;
+     t++; 
+   } while (t <= 10);
+   document.write("합계: "+sum6 );
+</script>
+
+<!-- <script>
+    let b = 0;
+    let c = 0;
+do { b += c + "<br>";
+  c++;
+}
+while (c < 10);
+document.write("b: " + b + "<br>");
+ 
+ </script> -->
+
+</body>
+</html>

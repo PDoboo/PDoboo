@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date객체(날짜)</title>
+</head>
+<body>
+    Date객체: 시간,날짜 해당<br>
+    객체생성은 var t = new Date(); 뿐 유일한 형식.<br>
+    get붙은 메소드: 기존 데이터를 읽어옴-getMonth()<br>
+    set붙은 메소드: 데이터를 저장-setMonth()<br>
+    <script>
+        var today = new Date();
+         document.write("현재 월: "+(today.getMonth()+1),"<br>"); //연산 시 괄호 안을 먼저 연산
+         document.write("현재 일: "+today.getDate(),"<br>");
+         document.write("현재 요일(일요일0): "+today.getDay(),"<br>");//일요일이 0으로 시작됨
+
+         var today2 = new Date(2022,4,30);
+         document.write("현재 월: "+(today2.getMonth()+1),"<br>"); //연산 시 괄호 안을 먼저 연산
+         document.write("현재 일: "+today2.getDate(),"<br>");
+         document.write("현재 요일(일요일0): "+today2.getDay(),"<br>");//일요일이 0으로 시작됨
+         
+         document.write("<hr>");
+         //현재 날짜부터 연말까지 며칠 남았는지 날짜 정보 출력
+         var today3 = new Date();
+         //올해년도 출력
+         var theDate = new Date(today3.getFullYear(),11,31);
+         var diffDate = theDate - today3; 
+         var result = Math.ceil(diffDate/(1000*60*24*60));
+         document.write("현재~말일까지: "+result +"일 남았습니다."); 
+
+         </script>
+</body>
+</html>

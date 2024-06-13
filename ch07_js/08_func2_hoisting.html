@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hoisting(호이스팅) - 변수나 함수 정의부를 프로그램 제일 앞으로 올리는것.<br>
+    함수 호출이 먼저 일어남.<br>익명함수에서는 hoisthing이 실행불가<br>
+    Javascript - Hoisting 적용(함수 정의 끌어 올림 적용 가능)<br>
+    C,Python,java - 적용 안됨 (적용이 안되면 함수 정의가 반드시 위에 있어야함)<br>
+    권고: 함수 정의를 먼저,호출을 나중에 할것.<br>
+    <p id ="show1"></p>
+    <p id ="show2"></p>
+    <p id ="show3"></p>
+    <script>
+        // 1.기존 작성순서
+        function mulFunc(a,b) { //함수 정의 
+            return a*b; 
+         }
+         
+         let x1; //변수
+         x1 = mulFunc(10,20); //호출
+         document.getElementById("show1").innerHTML = x1;
+        
+         // 2. hoisting 적용 - 함수 정의보다 나중에 와도 동작가능 -javascript 부분적 가능 
+         let x2; //변수
+         x2 = mulFunc(30,40); //호출
+         document.getElementById("show2").innerHTML = x2;
+         
+
+         function mulFunc2(a,b) { //함수 정의 
+            return a*b; 
+         }
+        
+          //3 . 익명함수 에서 hoisting 불가 
+          //Uncaught ReferenceError: Cannot access 'minus' before initialization
+          let x3; //변수
+         x3 = minus(40,50); //호출
+         document.getElementById("show3").innerHTML = x3;
+         
+          const minus = function (a,b) {//익명함수 정의 
+            return a-b; 
+         }
+      
+
+
+    </script>
+
+</body>
+</html>

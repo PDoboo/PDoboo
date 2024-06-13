@@ -18,7 +18,7 @@
     //생성자 함수
     //이미 생성된 생성자 함수에서 새로운 프로퍼티를 추가하는건 불가
     //property는 생성자 함수 안에 존재해야 함 => 
-    //=>prototype 사용
+    //=>prototype 사용하면 가능
     function Member (id,name,age){
         this.id = id;//hong1
         this.name = name;//홍길동1
@@ -31,7 +31,7 @@
         Member.prototype.company ="현대"; 
         Member.prototype.getId = function() {
             return "아이디는"+this.id+"입니다.";
-        }
+        } //prototype 형태
       
 
     //객체생성 new 를쓰면 Member의 값이 위에 입력됨 

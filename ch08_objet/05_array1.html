@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array1</title>
+</head>
+<body>
+    Array객체:다수의 값을 하나의 변수에 저장하는 특별한 객체<br>
+     a = 10; a는 (실제값 10),변수<br>
+     arr =[10,20,30,40]; arr 주소값,객체.<br>
+     문자열,숫자 등 타입이 달라도 배열 사용이 가능하다 (JAVA는 불가)<br>
+     배열 생성 방법<br>
+     <script>
+     // 배열생성 방법 1  
+      var d1 = new Array();
+       d1[0] ="10";
+       d1[1] = 20;
+       d1[2] = "30.2";
+     // 배열생성 방법 2 
+      var d2 = new Array(10,20,30);
+     // 배열생성 방법 3
+      var d3 = ["10",20,"30.2"];
+       document.write(d3[0],"<br>");
+       document.write(typeof d3,"<br>");
+       document.write(d3,"<br>");
+ 
+    //    // for 문장을 이용해 출력
+    //    for (var i=0; i,3; i++) { 
+    //         document.write(d3[i],"<br>");
+    //      }
+
+    //    // for in 문장을 이용해 출력
+    //    for (x in d3) { 
+    //     document.write(d3[x],"<br>");
+    //    }
+    //    //join: 하나의 데이터로 결합
+    //  document.write(d3.join("-"),"<br>");
+    //  document.write(typeof d3,"<br>");
+     
+     
+    //  document.write(d3.reverse(),"<br>");// 순서바꾸기
+    //  document.write(d3.sort(),"<hr>");//오름차순으로 정렬
+     
+     //splice(인덱스,삭제갯수)
+     var greenLine = ["사당","교대","방배","강남"];
+     var yellowLine = ["미금","정자","모란","수서"];
+     greenLine.splice(2,1,"서초","역삼")//splice 기존 데이터를 변경할수 있는 객체 2번째에 있는(방배)를 1개 지우고 서초,역삼을 넣어라
+     //사당,교대,서초,역삼,강남
+     document.write(greenLine + "<br>");
+     
+     //slice()시작인덱스,끝인덱스); 시작~끝 
+     document.write(greenLine.slice(1,3)+ "<br>");//교대와 서초가 나와야 함
+     //1번부터 2번인것까지만 출력
+     
+     //concat() 배열 결합 두가지를 결합한다 (괄호에 결합할 객체넣음)
+     document.write(greenLine.concat(yellowLine)+ "<br>");
+     
+     //pop() 출력 후 마지막을 제거
+     document.write(greenLine.pop()+ "<br>");
+     
+     // push(추가할 객체 넣음)마지막을 추가
+     greenLine.push("삼성")
+     document.write(greenLine+"<br>");
+
+
+     // shift() 배열의 맨 앞 삭제 
+     greenLine.shift();
+     document.write(greenLine+"<br>");
+      
+      // unshift("신도림") 배열의 맨 앞 삽입
+     greenLine.unshift("신도림");
+     document.write(greenLine+"<br>");
+     
+    </script>
+    </body>
+</html>

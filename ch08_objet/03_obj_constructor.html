@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Constructor</title>
 </head>
 <body>
-    생성자 함수(Constructor)-객체를 생성시, 초기값저장<br>
+    생성자 함수(Constructor)-객체를 생성시, 초기값저장의 용도<br>
     함수이름은 영문자 대문자(일반함수와 구별하기위해,일반함수는 소문자)<br>
     <p id="show"></p>
   <script>
     //생성자 함수
     function Member(id,name,age){
-        this.id = ids;//hong1
-        this.name = names;//홍길동1
+        this.id = id;//hong1
+        this.name = name;//홍길동1
         this.age = age;//20
     }; //객체생성 new 를쓰면 Member의 값이 위에 입력됨 
         // const mem0 = new Member();
@@ -37,7 +37,8 @@
 2. 생성자 함수의 메소드<br>
 <p id="show2"></p>
 <script>
-    //생성자 함수
+
+    //생성자 함수 : 객체를 생성할때 빠르게 하기위해
     function Member2 (id,name,age){
         this.id = id;//hong1
         this.name = name;//홍길동1

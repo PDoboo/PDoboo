@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_for1</title>
+</head>
+<body>
+    //결과: 안녕(red,index=0),안녕(green,index=1),안녕(blue,index=2),안녕(pink,index=3) 세로로 출력<br>
+    템플릿(이미 만들어진 틀) 문자열: `${}` `백틱사용<br>
+    <script>
+        const color = ["red","green","blue","pink"]; //배열을 의미
+        let text = "";
+        for(let i=0; i<=3; i++){
+           text += `<span style='color:${color[i]}'>안녕</span><br>`;
+        }
+        document.write(text);
+    </script>
+    <hr>
+    객체값 출력하기(for in)<br>
+    <script>
+        const member = {id: "hong", name: "홍길동" , age:30}; //객체
+        document.write(member.id,"<br>");
+          
+        for (let i in member){
+            document.write(member[i],"<br>");
+          }
+
+         </script>
+         <hr>
+          객체의 내부값 출력하기(for of)<br>
+          :배열이나 문자열 같이 반복 가능한 데이터형에 있는 요소들을 읽을때 사용<br>
+         <script>
+            let str1 ="Javascript"; 
+            for(let x of str1) {
+                document.write(x+"<hr>");
+            } 
+              const scores =[88,75,95,78,90];
+              for(let x1 of scores) {
+                document.write(x1 + "<br>");
+              }
+      </script>
+        [구구단1]<br>
+        // 2x1=2 2x2=4 2x3=6 2x4=8 2x5=10 2x6=12 2x7=14 2x8=16 2x9=18
+        <br>
+        <script>
+            let t = 2;
+            let result;
+            for (let y = 1; y <=9; y++) {
+                result = t*y; //2*1
+                document.write(t+"x"+y+"="+result+" ");//2*1=2
+            }
+        </script>
+<hr>
+[구구단2]<br>
+// 2단부터 9단 출력
+<br>
+<script>
+ 
+   let result2;
+    for(let s=2; s<=9; s++){ //s=2는 2단 s<=9는 9단
+     for(let y = 1; y<=9; y++) { //y=1 y=1~9까지 반복수행
+        result2 = s*y;
+         document.write(s+"x"+ y +"="+result2+" "); // s x y = result2에 해당하는 값 + " "출력
+           }
+           document.write("<br>")
+     }
+</script>
+[구구단3]<br>
+// 2x1=2 3x1=3 4x1=4 5x1=5 6x1=6 7x1=7 8x1=8 9x1=9
+   2x2=4<br>
+   2x3=6<br>
+   2x4=8<br>
+   2x5=10<br>
+   2x6=12<br>
+   2x7=14<br>
+   2x8=16<br>
+   2x9=18<br>
+<br>
+<script>
+       
+    let result3;
+    for(let s=1; s<=9; s++){ //s=2는 2단 s<=9는 9단 (행을 의미함 s<=9)
+     for(let y = 2; y<=9; y++) { // y=1~9까지 반복수행  (열을 의미)
+        result3 = s*y;
+         document.write(y+"x"+ s +"="+result3+" ");
+           }
+           document.write("<br>")
+     }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    closure(클로저)-전역변수가 아닌 변수를 전역변수와 같은방식으로 동작하지만<br>
+              함부로 그 값을 변경할수 없도록 변수를 보관하는방법<br>
+              전역변수의 문제 - 보안에 취약해 에러 유발됨을 해결하기 위한 방법<br>
+              자기호출 익명함수 사용. 한번만 실행<br>
+     <hr>
+     1.카운터에서 전역변수 사용하기<br>
+     <button onclick="incCounter()">+</button>
+     <p id="show1">0</p>
+          <script>
+            let counter = 0; //전역변수-(보안에취약하기 때문에 지역변수로 바꿔주기)
+            const incCounter = function() {
+                counter += 1;
+                document.getElementById("show1").innerHTML = counter;
+            }
+        </script>     
+        2.카운터에서 지역변수 사용하기<br>
+         <button onclick="incCounter2()">+</button>
+     <p id="show2">0</p>
+          <script>
+           
+            const incCounter2 = function() {
+                let counter2 = 0; //지역변수 function안에 있음. (문제 발생)
+                counter2 += 1;
+                document.getElementById("show2").innerHTML = counter2;
+            }
+                  </script>
+          3.closure<br>
+          <button onclick="incCounter3()">+</button>
+          <p id="show3">0</p>
+               <script>
+                // 자기호출 익명함수 한번 사용
+             const increase = (function() {
+                    let counter3 = 0; // 지역변수
+                    return function(){
+                        counter3 += 1;
+                        return counter3;
+                    }
+                })();
+
+                 function incCounter3() {
+                     
+                 document.getElementById("show3").innerHTML = increase();
+            }
+                </script>
+
+</body>
+</html>

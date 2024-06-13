@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>젼역변수.지역변수</title>
+</head>
+<body>
+    전역변수:함수 밖에서 선언된 변수. 함수 안에서도 값 사용가능<br>
+             보안에 취약하다.<br>
+    지역변수: 함수 안에서 선언된 변수. <br>
+    <script>
+        let x = 10; //전역변수: 어디서나 사용 가능
+        function func(){
+            let y =20; // 지역변수: 블록이나 함수 안에서만 사용
+            document.write(x+"<br>");
+            document.write(y+"<br>");
+        } 
+        func(); 
+        document.write(x+"<br>");
+        document.write(y+"<br>"); //에러(scope rule위반)
+
+    </script>
+</body>
+</html>

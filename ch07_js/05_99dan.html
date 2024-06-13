@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 테이블 만들기</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+          
+        let result;
+        let text ="";
+        text += "<table border='1'>";
+        for(let s=1; s<=9; s++){ //s=2는 2단 s<=9는 9단 (행을 의미함 s<=9)
+            text += "<tr>";
+            for(let y = 2; y<=9; y++) { // y=1~9까지 반복수행  (열을 의미)
+            result = s*y;
+            text += "<td>"+y+"x"+s+"="+result+"</td>";//열이 반복됨
+            }
+               text += "</tr>";
+         }
+         text += "</table>";
+            document.getElementById("show").innerHTML = text;
+    </script>
+</body>
+</html>
