@@ -23,20 +23,21 @@
       document.write("합계: ",sum);
       document.write(" 평균: ",avg,"<br>");
       document.getElementById("show").innerHTML = "합계: "+sum+"  평균: "+avg;
-    </script>
-      -->
-     <script>
+    </script> -->
+     
+      <script>
        function sum_avg (kor,eng,math) {
-          kor = 80;
-          eng = 90;
-          math = 100;
+         let kor = 80;
+         let eng = 90;
+         let math = 100;
           const sum = kor + eng + math;
           const avg = sum /3;
-          return {
-            sum : sum,
-            avgrage : avg 
-          };
-       }
+             return {
+              sum: sum,
+              average :avg
+             };
+          }
+       
         const results = sum_avg();
         console.log(results); 
      </script>
@@ -44,3 +45,4 @@
    
 </body>
 </html>
+

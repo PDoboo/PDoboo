@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom1</title>
+
+</head>
+<body>
+    querySelector("h1")-첫번째 요소 선택시 사용<br>
+    <div>
+        <h1>선호하는 음식1</h1>
+        <h1>선호하는 음식2</h1>
+        <div id="food1">
+            <h2 id="title">한식</h2>
+            <ol>
+                <li id="kimchi"><a href="#">김치볶음밥</a></li>
+                <li>떡볶이</li>
+                <li>순대국</li>
+            </ol>
+        </div>
+        <div id="food2">
+            <h2>양식</h2>
+            <ol id="list">
+                <li>파스타</li>
+                <li id="pizza">피자</li>
+                <li>뇨끼</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        document.querySelector("h1").style.color="green";
+        document.getElementsByTagName("h1")[1].style.color = "gray";
+         //("적용할 태그이름")[0]인덱스 값을 줘야 적용됨
+         document.getElementById("title").style.color = "red";
+         
+         document.getElementsByTagName("li")[1].style.backgroundColor = "red";
+         var myList = document.getElementById("food1").getElementsByTagName("li")[2];
+         myList.style.backgroundColor = "purple";
+    </script>
+</body>
+</html>

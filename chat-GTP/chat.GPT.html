@@ -1,63 +1,37 @@
-<hr>
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제출 버튼</title>
-    <link rel="stylesheet" href="chat-css/styles.css">
-    <!-- 주석은 ctrl + /  -->
-    <!--Internal CSS-->
-    <style>
-        body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;}
-
-.container {
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-} 
-
-button:hover {
-    background-color: #357AE8;
-}
-
-    </style>
-   
-</head>
-<body>
-    "제출"이라는 버튼을 누르면 "구글" 페이지가 나오도록 프로그램을 작성해줘!
-단, html, css, javascript를 사용해줘!
-    <div class="container">
-        <br><h1>제출 버튼</h1><br>
-        <form id="submitForm">
-            <button type="button" id="submitButton">제출</button><br>
-        </form>
-    </div>
-    <script src="./chat-js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('submitButton').addEventListener('click', function() {
-        window.location.href = 'https://www.google.com';
-    });
-});
-
-    </script>
-    <hr>
-    <img src="images_all/coffee.gif" alt="이미지가 없을때 글자 보여주기">
+<html>
+    <head>
+        <style>
+            body{margin: 0;
+                 padding: 0;
+                 }
+                 .quiz-container {
+            text-align: center;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        </style>
+        <body>
+            <div class="quiz-container">
+                <h1>퀴즈</h1>
+                <p>정답을 맞추면 홈페이지로 이동합니다.</p><br>
+                   힌트 : SPA 
+                </p>
+                <p>질문:ZARA보고 놀란 가슴 000 가자</p>
+                <input type="password" id="answer" placeholder="답을입력하세요">
+                <button onclick="checkAnswer()">제출</button>
+                <p id="feedback">야레야레..다시 시도하세요.</p>
+            </div>
+            <script>
+                function checkAnswer() {
+                    var answer = document.getElementById("answer").value;
+                    if (answer === "H&M") {
+                        window.location.href = "http://127.0.0.1:5500/js_study/Jsindex.html"; // 정답이면 홈페이지로 이동
+                    } else {
+                        document.getElementById("feedback").style.display = "block";
+                    }
+                }
+</script>
 </body>
 </html>

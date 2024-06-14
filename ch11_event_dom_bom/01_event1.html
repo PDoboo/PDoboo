@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    Event: 브라우저에서 사용자가 취하는 모든동작(마우스 클릭 등)<br>
+    Event Handler - 이벤트가 발생했을때 자바스크립트 실행문을 실행하는것<br>
+    Event Listener - 이벤트를 처리하는 함수<br>
+    버튼을 누를때마다 배경이 바뀌고 다시 시작하기<br>
+    키보드 접근성 - 마우스가 동작하지 않을때 키보드로 사용할 수 있어야 함.<br>
+    onmouseover : onfocus:키보드의 Tab키로 이동<br>
+    onmouseout  : onblur <br>
+    <script>
+        var color = ["white","yellow","aqua","pulple"];//[배열]
+        document.write(color+"<br>");//color 부분에 toString을 넣어도 실행됨. 
+        
+        var i =0;
+        function colorgBg(){ i++; 
+            if (i>=color.length) i =0;
+        //배경색 바꾸기
+        var bodyTag= document.getElementsByTagName("body")[0]; 
+         bodyTag.style.backgroundColor = color[i]; 
+        }
+     window.onload = function(){
+        var btn2 = document.getElementById("btn2")
+            btn2.onclick= function(){colorgBg();};   
+    
+   
+        // var btn4 = document.getElementById("btn4");
+        //     btn4.onmouseover= function(){colorgBg();}
+
+            var btn4 = document.getElementById("btn4");
+            btn4.onmouseover=btn4.onfocus=function(){colorgBg();}
+     }
+
+    </script>
+    
+  <p><button onclick="colorgBg();">버튼1</button></p>
+  <p><button id="btn2">버튼2(onclick)</button></p>
+  <p><button onmouseover="colorgBg();"onfocus="colorgBg()">버튼3(onmouseover)</button></p>
+   <!-- onmouseover : 마우스가 올라갔을때 이벤트 발생  -->
+  <p><button id="btn4">버튼4</button></p>       
+ 
+
+
+</body>
+</html>

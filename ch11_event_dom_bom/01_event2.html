@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    this -이벤트가 일어나는 곳<br>
+    <script>
+        var myColor ;//전역변수 선언(함수 안,밖 다 가능)
+        function chColor(obj,state){
+            if (state =="over") {
+                myColor = "red";
+            } 
+            else { myColor ="black";
+                }
+            obj.style.color = myColor;    
+
+            }
+
+            
+    </script>
+     // this - onmouseover, onmouseout<br>
+    <button onmouseover="chColor(this,'over')" 
+     onmouseout="chColor(this,'out')">마우스아웃(마우스가 밖으로나와있는상태)</button>
+     
+</body>
+</html>

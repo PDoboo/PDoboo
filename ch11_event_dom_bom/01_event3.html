@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    정규 표현식 - 유효성 검증<br>
+    <style>
+        body {margin: 0;  line-height: 40px;
+            display: flex;
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center;     /* 수직 중앙 정렬 */
+            height: 100vh;           /* 전체 화면 높이 */}
+    </style>
+    <script>
+        function submit_chk(myForm){ //parameter변수 - 지역변수 
+            var reg1 = /^[가-힣]{2,5}$/; // <-자바스크립트 정규표현식 //사이에 내용입력
+            // 전화번호 010-000-0000
+            var reg2 = /^010\d{3,4}\d{4}$/;
+            
+            var name = myForm.user_name;
+            var tel = myForm.user_tel;
+            var result1 = reg1.test(name.value); //reg1에 대해 test();이름이 정규표현식에 맞는지 틀린지
+            var result2 = reg2.test(tel.value); 
+            
+            if(!result1) { //if (!문제가 발생 했을때)
+                 alert("이름입력 오류!"); //확인을 누르면 밑으로 진행
+                 name.value=""; //오류 나면 내용을 지우고
+                 name.focus(); // 깜빡거리게 설계
+                 return false; // 취소
+            } else if(!result2) {
+                alert("연락처 입력 오류!");
+                 tel.value=""; //오류 나면 내용을 지우고
+                 tel.focus(); // 깜빡거리게 설계
+                 return false; //취소 
+
+            }
+        }
+        //취소 버튼 눌렀을때 확인/취소창을 띄우고, 다시 한번 회원가입 취소 여부를 묻는다.
+        function reset_chk(myForm){
+         var result = confirm("정말 회원가입을 취소하시겠습니까?");
+         if(result){
+            return false; //reset 기능취소(내용입력된 상태로 멈춤)
+            //return 을 true로 바꾸면 reset을 실행함.
+         }
+        }
+    </script>
+</head>
+<body onload="document.f1.user_name.focus();"> 
+    <!-- 문서가 위에서부터 동작하기 때문에 동작 후 하단에 body부분에 onload를 입력해준다 
+     회원가입에 입력상자 포커스가 깜빡 거리게 하는 명령어 입력-->
+    회원가입 입력 조건: 한글2~5사이 입력<br>
+               연락처: 010-0000-0000<br>
+        유효성 검증:회원가입,연락처<br>
+
+    <form action="#" method="post" name="f1" onsubmit="return submit_chk(this)"
+                                              onreset="return reset_chk(this)">
+     <!-- this-return 여기서 this는 form을 의미함. return- 함수에서 false가 나오면 action페이지로 데이터전송취소-->
+      <!-- this-reset, return-함수에서 false나오면 reset기능이 취소  -->
+      
+      회원가입:&nbsp;<input type="text" name="user_name" id="user_name"><br>
+        연락처:&nbsp;&nbsp;<input type="text" name="user_tel" id="user_tel"><br>
+
+        &nbsp;<input type="submit" value="회원가입">
+        &nbsp;<input type="reset" value="가입취소"><br>
+    </form>
+ 
+</body>
+</html>

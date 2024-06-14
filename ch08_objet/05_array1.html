@@ -21,26 +21,26 @@
       var d2 = new Array(10,20,30);
      // 배열생성 방법 3
       var d3 = ["10",20,"30.2"];
-       document.write(d3[0],"<br>");
+       document.write(d3[0]*2,"<br>");
        document.write(typeof d3,"<br>");
        document.write(d3,"<br>");
- 
-    //    // for 문장을 이용해 출력
-    //    for (var i=0; i,3; i++) { 
-    //         document.write(d3[i],"<br>");
-    //      }
+       document.write(d3.toString(),"<br>");
+       // for 문장을 이용해 출력
+       for (var i=0; i<3; i++) { 
+            document.write(d3[i],"<br>");
+         }
 
-    //    // for in 문장을 이용해 출력
-    //    for (x in d3) { 
-    //     document.write(d3[x],"<br>");
-    //    }
-    //    //join: 하나의 데이터로 결합
-    //  document.write(d3.join("-"),"<br>");
-    //  document.write(typeof d3,"<br>");
+       // for in 문장을 이용해 출력
+       for (x in d3) { 
+        document.write(d3[x],"<br>");
+       }
+       //join: 하나의 데이터로 결합
+     document.write(d3.join("-"),"<br>");
+     document.write(typeof d3.join("-"),"<br>");
      
      
-    //  document.write(d3.reverse(),"<br>");// 순서바꾸기
-    //  document.write(d3.sort(),"<hr>");//오름차순으로 정렬
+     document.write(d3.reverse(),"<br>");// 순서바꾸기
+     document.write(d3.sort(),"<hr>");//오름차순으로 정렬
      
      //splice(인덱스,삭제갯수)
      var greenLine = ["사당","교대","방배","강남"];
