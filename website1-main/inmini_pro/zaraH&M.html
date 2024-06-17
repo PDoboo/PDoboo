@@ -49,15 +49,15 @@
            힌트 : SPA 
         </p>
         <p>질문:ZARA보고 놀란 가슴 000 가자</p>
-        <input type="text" id="answer" placeholder="답을입력하세요">
-        <button onclick="checkAnswer()">제출</button>
-        <p id="feedback">틀렸습니다. 다시 시도하세요.</p>
+        <input type="password" id="answer" placeholder="답을입력하세요">
+        <button onclick="checkAnswer()">제출-클릭</button>
+        <p id="feedback">야레야레..다시 시도하세요..</p>
     </div>
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
-            if (answer == "H&M") {
-                window.location.href = "http://127.0.0.1:5500/website1-main/mini_pro0.html"; // 정답이면 홈페이지로 이동
+            if (answer == "H&M","h&m") {
+                window.location.href = "http://127.0.0.1:5500/js_study/Js_index.html"; // 정답이면 홈페이지로 이동
             } else {
                 document.getElementById("feedback").style.display = "block";
             }
