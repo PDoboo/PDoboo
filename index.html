@@ -119,16 +119,16 @@ display: inline-block;
 </style>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </script>
 <script>
 $(document).ready(function () {
-   $('.outer-menu-item').hover(function () {
-   $(this).find('.inner-menu').show();
-   }, function () {
-   $(this).find('.inner-menu').hide();
-   });
-   });
+    $('.outer-menu-item').hover(function () {
+        $(this).find('.inner-menu').slideDown();
+    }, function () {
+        $(this).find('.inner-menu').slideUp();
+    });
+});
 //    익명함수라 무조건 실행
 
 </script>
