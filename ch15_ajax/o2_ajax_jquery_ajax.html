@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script> //인터넷 연결된 상태에서 쓰는 경우  -->
+  
+  <script src="jquery-3.7.1.js"></script>
+<script>
+
+    // callback함수: 서버로부터 브라우저로 데이터가 왔을때 실행되는 함수 여기서는 success
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({url: "ajax_test.txt", success: function(result){ //result 의미 -ajax_test.txt 문서
+      $("#div1").html(result); // ajax_test.txt 안에 id값 
+    }});
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Window</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+<hr>
+<form action="#">
+    <input type="button" value="구글창 열기" onclick="window.open('https://www.google.com','_self','windth=300,height=300')">
+</form>
+
+<h2 id="demo"></h2>
+setTimeout()시간지정 해주고 (0초 후) 명령어 출력
+<script>
+const myTimeout = setTimeout(myGreeting, 5000);//setTimeout(mygreeting,시간지정) 현재는 5000(5초)후 하단에 "deep bark" 뜸 
+
+function myGreeting() {
+  document.getElementById("demo").innerHTML = "deep bark"
+}
+</script>
+<hr>
+<p id="demo2"></p>
+setInterval(얼마 시간 주기로 반복 출력)
+<script>
+const element = document.getElementById("demo2");
+setInterval(function() {element.innerHTML += "Hello"}, 1000);//1초 마다 "hello"반복출력
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

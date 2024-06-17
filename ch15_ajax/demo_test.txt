@@ -1,0 +1,9 @@
+<h2>JQuery::Ajax::load("demo_test.txt")
+<p id ="p1">JQuery의 Ajax 연습<br>
+깃허브 그룹 프로젝트 하는 법
+
+1. 깃허브 레파지토리 만들기 
+2. 팀원들 초대하기 Invite collaborators 클릭 (만든사람이 초대 가능) 
+3. Add people 클릭 후 팀원 아이디 검색 
+4. 팀원이 초대 수락해야 됨 (이메일로 수락가능) 
+<p>

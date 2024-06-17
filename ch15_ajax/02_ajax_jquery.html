@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){ //$(document)가 readay되면 fuction() {실행하겠다
+  $("button").click(function(){ //$("button")을click하면 실행하겠다
+    $("#div1").load("Github_Group.txt"); 
+  });
+});
+</script>
+<title>jQuery::Ajax::load()</title>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+
+</body>
+</html>

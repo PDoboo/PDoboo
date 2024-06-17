@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEvent</title>
+    <style>
+        div {
+          background-color: coral;
+          padding: 16px;
+        }
+        </style>
+</head>
+<body>
+    [2가지 이상 이벤트사용시]
+    javascript : addEventListener()<br>
+    jquery : on()<br>
+  버블링 : 가장 안쪽 요소의 이벤트가 먼저 처리된 다음, 바깥쪽 이벤트 처리<br>
+  캡처링 : 가장 바깥쪽 요소의 이벤트가 먼저 처리된 다음, 안쪽요소의 이벤트가 처리<br>
+  <hr>
+  <!-- addEventListener(event,function,useCapture); 
+  useCapture - true면 captureing , false면 bubling (default)   -->
+  <img src="./bc.png" width="600px" height="800px">
+  <br>
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>The difference between bubbling and capturing:</p>
+
+<div id="myDiv">
+  <p id="myP">Click this paragraph, I am Bubbling.</p>
+</div><br>
+
+<div id="myDiv2">
+  <p id="myP2">Click this paragraph, I am Capturing.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myP").addEventListener("click", function() {
+  myDisplay("You clicked the P element!");
+}, false); 
+
+document.getElementById("myDiv").addEventListener("click", function() {
+  myDisplay("You clicked the DIV element!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+  myDisplay("You clicked the P element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  myDisplay("You clicked the DIV element!");
+}, true);
+
+function myDisplay(text) {
+  document.getElementById("demo").innerHTML += text + "<br>";
+}
+</script>
+
+</body>
+</html>

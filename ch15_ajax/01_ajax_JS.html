@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+ 
+</head>
+<body>
+    Ajax(Asynchronous Javascript and XML) - 비동기 데이터 전송<br>
+    브라우저가 직접 비동기 방식으로 http통신해 서버와 클라이언트가 데이터를 교환하는 기술<br>
+    네트워크의 부하를 줄이기 위해 브라우저에 방문한 데이터를 브라우저가 보관해 서버의 방문없이
+    브라우저가 출력해주기<br>
+    (예) 네이버 검색창 자동완성기능,구글지도,메일서비스,블로그서비스 등<br>
+    ajax 2 가지 종류로 사용 : javascript 와 jquery를(권장)
+
+<h1>javascript Ajax </h1>
+
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest(); //브라우저에서 생성된 객체 
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) { //200 이면 문제없이 전송가능
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "Github_group.txt", true); //GET 뒤에 "버튼누르면 열릴 내용의 파일명 작성" 
+  xhttp.send();
+}
+</script>
+
+
+</body>
+</html>
