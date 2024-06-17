@@ -123,6 +123,7 @@ display: inline-block;
 </script>
 <script>
 $(document).ready(function () {
+<<<<<<< HEAD
     $('.outer-menu-item').hover(function () {
         $(this).find('.inner-menu').slideDown();
     }, function () {
@@ -130,10 +131,19 @@ $(document).ready(function () {
     });
 });
 //    익명함수라 무조건 실행
+=======
+   $('.outer-menu-item').hover(function () {
+   $(this).find('.inner-menu').show();
+   }, function () {
+   $(this).find('.inner-menu').hide();
+   });
+   });
+//익명함수라 무조건 실행
+>>>>>>> 11389a65273fcf552786bfb7a426d862904095d7
 
 </script>
 <script>
-    var myColor; // 전역변수 선언(함수 안, 밖 다 가능)
+    var myColor; //전역변수 선언(함수 안, 밖 다 가능)
     function chColor(obj, state) {
         if (state == "over") {
             myColor = "blue";
@@ -203,17 +213,14 @@ $(document).ready(function () {
   <div class="content3">
     <h3>Git Hub</h3>
       <p>Git 원격저장소에 팀원이나 내 코드를 올리고 수정해 작업가능함.<br>
-        상단의 자바스크립트 창에 Git 카테고리로 이동가능
-       
+        상단의 자바스크립트 창에 Git 카테고리로 이동가능      
       </p>
   </div>
 
 <div class="footer">
   <p>copy@ AI class 중..</p>
 </div>
-<!-- <script>
- document.getElementsByClassName("content2")[0].style.color = "red";
-</script> -->
+
 </body>
 </html>
 
