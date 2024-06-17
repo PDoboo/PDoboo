@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript..</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+margin: 0; padding: 0;
+font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+}
+a { text-decoration: none; }
+li { list-style: none; }
+</style>
+<!-- 기본 클래스 -->
+<style>
+.pull-left { float: left; }
+.pull-right { float:right; }
+#main-navigation {
+border-top: 1px solid #C8C8C8;
+border-bottom: 1px solid #C8C8C8;
+margin-bottom: 20px;
+height: 40px;
+}
+.outer-menu-item {
+float: left;
+position: relative;
+}
+.outer-menu-item:hover {
+background: black;
+color: white
+}
+.menu-title {
+display: block;
+height: 30px; line-height: 30px;
+text-align: center;
+padding: 5px 60px;
+}
+.inner-menu {
+display: none;
+position: absolute;
+top: 40px; left: 0;
+width: 100%;
+background: white;
+box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+z-index: 1000; 
+/* z-index 비닐막 색상 싸서 안보이게 하는것  */
+text-align: center
+}
+.inner-menu-item > a {
+display: block;
+padding: 5px 10px;
+color: #7b60f3
+}
+.inner-menu-item > a:hover {
+background: #747394;
+color: white;
+}
+
+/* <!-- 5. 검색 양식 추가하기(내비게이션 내부의 검색) --> */
+
+.search-bar {
+height: 20px;
+padding: 10px;
+}
+.input-search {
+display: block;
+float: left;
+background-color: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 15px 0 0 15px;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+width: 160px; height: 24px;
+padding: 0 0 0 20px;
+font-size: 12px;
+color: #555555;
+}
+.input-search:focus {
+border-color: rgba(82, 168, 236, 0.8);
+outline: 0;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.input-search-submit {
+display: block;
+float: left;
+width: 50px; height: 26px;
+border-radius: 0 15px 15px 0;
+border: 1px solid #CCCCCC;
+margin-left: -1px;
+
+vertical-align: top;
+display: inline-block;
+}
+
+.content1 { 
+            margin: 30px;
+            padding: 20px;
+            
+}
+.content2 { 
+            margin: 30px;
+            padding: 20px;
+    }
+
+    .content3 { 
+            margin: 30px;
+            padding: 20px;
+    }
+    
+
+.footer {clear: both;
+  background-color: rgb(223, 211, 211);
+  padding: 10px;
+  height: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+</style>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function () {
+   $('.outer-menu-item').hover(function () {
+   $(this).find('.inner-menu').show();
+   }, function () {
+   $(this).find('.inner-menu').hide();
+   });
+   });
+//    익명함수라 무조건 실행
+
+</script>
+<script>
+    var myColor; // 전역변수 선언(함수 안, 밖 다 가능)
+    function chColor(obj, state) {
+        if (state == "over") {
+            myColor = "blue";
+        } else {
+            myColor = "black";
+        }
+        obj.style.color = myColor;
+    }
+</script>
+</head>
+<body>
+    <nav id="main-navigation">
+        <div class="pull-left">
+        <ul class="outer-menu">
+        <li class="outer-menu-item">
+        <span class="menu-title">HTML</span>
+        <ul class="inner-menu">
+        <li class="inner-menu-item"> <a href= "#">html</a> </li>
+        <li class="inner-menu-item"> <a href= "#">index</a> </li>
+        </ul>
+        </li>
+        <li class="outer-menu-item">
+        <span class="menu-title">CSS</span>
+        <ul class="inner-menu">
+        <li class="inner-menu-item"> <a href= "#">css</a> </li>
+        <li class="inner-menu-item"> <a href= "#">style</a> </li>
+        <li class="inner-menu-item"> <a href= "#">padding</a> </li>
+        </ul>
+        </li>
+        <li class="outer-menu-item">
+        <span class="menu-title">JavaScript</span>
+        <ul class="inner-menu">
+        <li class="inner-menu-item"> <a href= "#">function</a> </li>
+        <li class="inner-menu-item"> <a href= "https://github.com/PDoboo/PDoboo.git">Git</a> </li>
+        <li class="inner-menu-item"> <a href= "#">consloe.log</a> </li>
+        
+        </ul>
+        </li>
+        </ul>
+        </div>
+        <div class="pull-right">
+        <div class="search-bar">
+        <form>
+        <input type="text" class="input-search" / >
+        <input type="submit" class="input-search-submit" value= "검색" / >
+        </form>
+        </div>
+        </div>
+        </nav>
+<div class="content1">
+  <h2>JS 스불재 여정</h2>
+  <h3>함수</h3>
+   <p>함수는 영어로 Function 이라고 하는데 함수라고 했을때 떠오르는 이미지는 수납상자 입니다.<br>
+   코드가 많아지면 그 코드들을 잘 정리 정돈하기 위한 도구가 필요합니다.<br>
+   그것이 함수이며 유지보수와 작업시간을 단축시켜 주는 장점이 있습니다.</p>
+</div>
+<div class="content2" onmouseover="chColor(this, 'over')" onmouseout="chColor(this, 'out')">
+    <h3>ON:이벤트</h3>
+    <p>Event: 브라우저에서 사용자가 취하는 모든동작(마우스 클릭 등)<br>
+        Event Handler - 이벤트가 발생했을때 자바스크립트 실행문을 실행하는것<br>
+        Event Listener - 이벤트를 처리하는 함수<br>
+        버튼을 누를때마다 배경이 바뀌고 다시 시작하기<br>
+        키보드 접근성 - 마우스가 동작하지 않을때 키보드로 사용할 수 있어야 합니다.<br>
+       <br>
+     </p>
+  </div>
+  <div class="content3">
+    <h3>Git Hub</h3>
+      <p>Git 원격저장소에 팀원이나 내 코드를 올리고 수정해 작업가능함.<br>
+        상단의 자바스크립트 창에 Git 카테고리로 이동가능
+        "http://127.0.0.1:5500/website1-main/mini_pro0.html";
+      </p>
+  </div>
+
+<div class="footer">
+  <p>copy@ AI class 중..</p>
+</div>
+<!-- <script>
+ document.getElementsByClassName("content2")[0].style.color = "red";
+</script> -->
+</body>
+</html>
+
+
